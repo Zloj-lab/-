@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Практикум 11: Фон и карточки</title>
+    <style>
+        /* Базовые стили и палитра */
+        body {
+            background-color: #f8fafc;
+            color: #0f172a;
+            font-family: sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* --- 2. Hero-секция с градиентом --- */
+        .hero {
+            /* Линейный градиент из насыщенного синего в фиолетовый */
+            background: linear-gradient(135deg, #2563eb, #7c3aed);
+            color: #ffffff; /* Белый текст для прохождения проверки WCAG на темном фоне */
+            padding: 100px 20px;
+            text-align: center;
+        }
+
+        .hero h1 {
+            margin-top: 0;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Легкая тень для заголовка */
+        }
+
+        /* Контейнер для карточек */
+        .cards-container {
+            display: flex;
+            gap: 20px;
+            padding: 40px 20px;
+            justify-content: center;
+        }
+
+        /* --- 3 и 4. Карточка с белым фоном, скруглением и мягкой тенью --- */
+        .card {
+            background-color: #ffffff;
+            border-radius: 12px;
+            padding: 30px;
+            width: 300px;
+            
+            /* Многослойная мягкая тень без "грязного" черного цвета */
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.06), 
+                        0 2px 4px -2px rgba(0, 0, 0, 0.06);
+            
+            /* Плавная анимация для эффекта при наведении */
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .card h2 {
+            margin-top: 0;
+            color: #0f172a;
+        }
+
+        /* --- 5. Эффект наведения (hover) --- */
+        .card:hover {
+            transform: translateY(-3px); /* Смещение вверх */
+            /* Усиленная, но все еще мягкая тень для иллюзии подъема */
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 
+                        0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Секция Hero -->
+    <div class="hero">
+        <h1>Добро пожаловать в веб-дизайн</h1>
+        <p>Практическая работа с градиентами и контрастом</p>
+    </div>
+
+    
+    <div class="cards-container">
+        <div class="card">
+            <h2>Карточка 1</h2>
+            <p>Пример контента на белом фоне. Темный текст обеспечивает высокий уровень контраста WCAG.</p>
+        </div>
+        
+        <div class="card">
+            <h2>Карточка 2</h2>
+            <p>Наведите курсор на эту карточку, чтобы увидеть эффект плавного подъема и увеличения тени.</p>
+        </div>
+    </div>
+
+</body>
+</html>
