@@ -1,0 +1,43 @@
+.card {
+    position: relative; }
+.badge {
+    position: absolute; 
+    top: 12px;
+    right: 12px;
+    background-color: #ef4444;
+    color: white;
+    padding: 4px 10px;
+    border-radius: 20px;
+}
+.header {
+    position: fixed; 
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.95);
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    z-index: 100; 
+}
+body {
+    padding-top: 70px; 
+}
+.modal-overlay {
+    position: fixed;
+    inset: 0; 
+    background: rgba(15, 23, 42, 0.6);
+    z-index: 1000; 
+}
+.modal-window {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); 
+    z-index: 1001; 
+    background: white;
+    padding: 20px;
+}
+.modal-window .close-btn {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+}
